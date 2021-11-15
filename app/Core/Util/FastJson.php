@@ -13,24 +13,10 @@ trait FastJson
 
     /**
      * 成功返回
-     * @param object|null $data
-     * @return JsonResponse
-     */
-    public function success(object $data = null): JsonResponse
-    {
-        return response()->json([
-            'code' => ErrorState::SUCCESS,
-            'message' => '成功',
-            'data' => $data
-        ]);
-    }
-
-    /**
-     * 成功返回
      * @param array $data
      * @return JsonResponse
      */
-    public function successArr(array $data = []): JsonResponse
+    public function success($data = []): JsonResponse
     {
         return response()->json([
             'code' => ErrorState::SUCCESS,
